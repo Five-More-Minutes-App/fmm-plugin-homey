@@ -1,0 +1,18 @@
+{
+  "id": "end_time",
+  "title": {
+    "en": "End the time now",
+    "sv": "Avsluta tiden nu"
+  },
+  "titleFormatted": {
+    "en": "End the time now",
+    "sv": "Avsluta tiden nu"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=computer"
+    }
+  ]
+}

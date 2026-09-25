@@ -1,0 +1,16 @@
+{
+  "name": "com.fivemoreminutes",
+  "version": "1.0.0",
+  "description": "Five More Minutes for Homey: see and control the screen time on a computer from your smart home.",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.mjs\"",
+    "validate": "homey app validate --level debug",
+    "validate:publish": "homey app validate --level publish",
+    "manifest": "node ../fmm-plugin-registry/scripts/validate.mjs --manifest fmm-plugin.json"
+  }
+}

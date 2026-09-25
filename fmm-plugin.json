@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "id": "homey",
+  "name": "Homey",
+  "description": "Start, extend and stop the timer from Homey, see whether time is running and how much is left, and run flows when time starts, is added, ends, or the computer is locked.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Five More Minutes",
+    "url": "https://github.com/five-more-minutes"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/five-more-minutes/fmm-plugin-homey",
+  "documentation": "https://github.com/five-more-minutes/fmm-plugin-homey#readme",
+  "icon": "icon.png",
+  "categories": ["smart-home", "automation"],
+  "platform": "Homey Pro",
+  "permissions": [
+    {
+      "scope": "state:read",
+      "reason": "Shows whether a timer is running, how much is left, and whether the computer is locked or online, and starts flows when that changes."
+    },
+    {
+      "scope": "timer:start",
+      "reason": "Lets a flow or a button in Homey start a timer, for example when homework time begins."
+    },
+    {
+      "scope": "timer:extend",
+      "reason": "Lets a flow add time to a running timer, for example when a chore is done."
+    },
+    {
+      "scope": "timer:stop",
+      "reason": "Lets a flow end the time now, which locks the computer, for example at bedtime."
+    },
+    {
+      "scope": "timer:cancel",
+      "reason": "Lets a flow cancel a running timer without locking the computer."
+    }
+  ],
+  "install": {
+    "steps": [
+      {
+        "title": "Install the app on your Homey Pro",
+        "text": "Homey Pro only: the app talks to Five More Minutes on your home network. On a computer on the same network, install the Homey command line tool, sign in, and install the app.",
+        "code": "npm install -g homey\nhomey login\ngit clone https://github.com/five-more-minutes/fmm-plugin-homey\ncd fmm-plugin-homey\nhomey app install",
+        "link": {
+          "label": "Installing apps on Homey (Athom)",
+          "url": "https://apps.developer.homey.app/the-basics/getting-started"
+        }
+      },
+      {
+        "title": "Add the computer",
+        "text": "In the Homey app go to Devices, press the plus, choose Five More Minutes, then Computer. Enter these two values when asked for the address and the key.",
+        "code": "Address: {{FMM_URL}}\nAPI key: {{API_KEY}}"
+      },
+      {
+        "title": "Use it in flows",
+        "text": "The computer now shows whether a timer runs and the minutes left. In Flows you get triggers for start, added time, end, lock and unlock, and actions to start, extend, end and cancel.",
+        "link": {
+          "label": "Flow examples",
+          "url": "https://github.com/five-more-minutes/fmm-plugin-homey#flow-ideas"
+        }
+      }
+    ]
+  },
+  "compatibility": {
+    "apiVersion": 1
+  }
+}

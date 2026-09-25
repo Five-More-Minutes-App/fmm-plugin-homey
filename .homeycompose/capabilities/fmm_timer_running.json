@@ -1,0 +1,22 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Timer running",
+    "sv": "Timer igång"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "insights": true,
+  "insightsTitleTrue": {
+    "en": "A timer started",
+    "sv": "En timer startade"
+  },
+  "insightsTitleFalse": {
+    "en": "The timer ended",
+    "sv": "Timern tog slut"
+  },
+  "options": {
+    "greyout": false
+  }
+}

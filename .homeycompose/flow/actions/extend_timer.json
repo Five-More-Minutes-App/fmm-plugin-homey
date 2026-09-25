@@ -1,0 +1,31 @@
+{
+  "id": "extend_timer",
+  "title": {
+    "en": "Add time",
+    "sv": "Lägg till tid"
+  },
+  "titleFormatted": {
+    "en": "Add [[minutes]] minutes to the timer",
+    "sv": "Lägg till [[minutes]] minuter på timern"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=computer"
+    },
+    {
+      "type": "text",
+      "name": "minutes",
+      "required": false,
+      "title": {
+        "en": "Minutes (empty for the usual five)",
+        "sv": "Minuter (tomt för de vanliga fem)"
+      },
+      "placeholder": {
+        "en": "5",
+        "sv": "5"
+      }
+    }
+  ]
+}

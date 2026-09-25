@@ -1,0 +1,18 @@
+{
+  "id": "timer_running",
+  "title": {
+    "en": "Timer !{{is|isn't}} running",
+    "sv": "Timer !{{är|är inte}} igång"
+  },
+  "titleFormatted": {
+    "en": "Timer !{{is|isn't}} running",
+    "sv": "Timer !{{är|är inte}} igång"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=computer"
+    }
+  ]
+}

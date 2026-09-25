@@ -1,0 +1,19 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Locked",
+    "sv": "Låst"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "insights": true,
+  "insightsTitleTrue": {
+    "en": "The computer was locked",
+    "sv": "Datorn låstes"
+  },
+  "insightsTitleFalse": {
+    "en": "The computer was unlocked",
+    "sv": "Datorn låstes upp"
+  }
+}

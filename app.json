@@ -1,0 +1,571 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "com.fivemoreminutes",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "Five More Minutes",
+    "sv": "Five More Minutes"
+  },
+  "description": {
+    "en": "See and control the screen time on your child's computer from Homey: start a timer, give more time, and react when time is up.",
+    "sv": "Se och styr skärmtiden på barnets dator från Homey: starta en timer, ge mer tid och reagera när tiden är slut."
+  },
+  "category": [
+    "tools"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Five More Minutes"
+  },
+  "brandColor": "#f2a63b",
+  "source": "https://github.com/five-more-minutes/fmm-plugin-homey",
+  "homepage": "https://github.com/five-more-minutes/fmm-plugin-homey#readme",
+  "support": "https://github.com/five-more-minutes/fmm-plugin-homey/issues",
+  "bugs": {
+    "url": "https://github.com/five-more-minutes/fmm-plugin-homey/issues"
+  },
+  "tags": {
+    "en": [
+      "screen time",
+      "parental control",
+      "timer",
+      "kids"
+    ],
+    "sv": [
+      "skärmtid",
+      "föräldrakontroll",
+      "timer",
+      "barn"
+    ]
+  },
+  "flow": {
+    "triggers": [
+      {
+        "id": "came_online",
+        "title": {
+          "en": "The computer came online",
+          "sv": "Datorn kom online"
+        },
+        "hint": {
+          "en": "Runs when the computer starts talking to Five More Minutes.",
+          "sv": "Körs när datorn börjar prata med Five More Minutes."
+        },
+        "tokens": [],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=computer"
+          }
+        ]
+      },
+      {
+        "id": "locked",
+        "title": {
+          "en": "The computer was locked",
+          "sv": "Datorn låstes"
+        },
+        "hint": {
+          "en": "Runs when Five More Minutes locks the computer.",
+          "sv": "Körs när Five More Minutes låser datorn."
+        },
+        "tokens": [
+          {
+            "name": "minutes",
+            "type": "number",
+            "title": {
+              "en": "Minutes locked",
+              "sv": "Minuter låst"
+            },
+            "example": 30
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=computer"
+          }
+        ]
+      },
+      {
+        "id": "timer_ended",
+        "title": {
+          "en": "A timer ended",
+          "sv": "En timer tog slut"
+        },
+        "hint": {
+          "en": "Runs when the timer ends, whether time ran out or it was cancelled.",
+          "sv": "Körs när timern tar slut, oavsett om tiden gick ut eller den avbröts."
+        },
+        "tokens": [],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=computer"
+          }
+        ]
+      },
+      {
+        "id": "timer_extended",
+        "title": {
+          "en": "Time was added",
+          "sv": "Tid lades till"
+        },
+        "hint": {
+          "en": "Runs when a running timer is made longer.",
+          "sv": "Körs när en pågående timer förlängs."
+        },
+        "tokens": [
+          {
+            "name": "minutes",
+            "type": "number",
+            "title": {
+              "en": "Minutes left",
+              "sv": "Minuter kvar"
+            },
+            "example": 30
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=computer"
+          }
+        ]
+      },
+      {
+        "id": "timer_started",
+        "title": {
+          "en": "A timer started",
+          "sv": "En timer startade"
+        },
+        "hint": {
+          "en": "Runs when time is started on the computer, from anywhere: the app, a schedule, or a flow.",
+          "sv": "Körs när tid startas på datorn, varifrån som helst: appen, ett schema eller ett flöde."
+        },
+        "tokens": [
+          {
+            "name": "minutes",
+            "type": "number",
+            "title": {
+              "en": "Minutes",
+              "sv": "Minuter"
+            },
+            "example": 30
+          },
+          {
+            "name": "message",
+            "type": "string",
+            "title": {
+              "en": "Message",
+              "sv": "Meddelande"
+            },
+            "example": "Homework"
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=computer"
+          }
+        ]
+      },
+      {
+        "id": "unlocked",
+        "title": {
+          "en": "The lock ended",
+          "sv": "Låsningen tog slut"
+        },
+        "hint": {
+          "en": "Runs when the lock ends or is lifted, for instance because time was started.",
+          "sv": "Körs när låsningen tar slut eller hävs, till exempel för att tid startades."
+        },
+        "tokens": [],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=computer"
+          }
+        ]
+      },
+      {
+        "id": "went_offline",
+        "title": {
+          "en": "The computer went offline",
+          "sv": "Datorn gick offline"
+        },
+        "hint": {
+          "en": "Runs when the computer stops talking to Five More Minutes, for instance when it is turned off.",
+          "sv": "Körs när datorn slutar prata med Five More Minutes, till exempel när den stängs av."
+        },
+        "tokens": [],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=computer"
+          }
+        ]
+      }
+    ],
+    "conditions": [
+      {
+        "id": "locked",
+        "title": {
+          "en": "Computer !{{is|isn't}} locked",
+          "sv": "Datorn !{{är|är inte}} låst"
+        },
+        "titleFormatted": {
+          "en": "Computer !{{is|isn't}} locked",
+          "sv": "Datorn !{{är|är inte}} låst"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=computer"
+          }
+        ]
+      },
+      {
+        "id": "online",
+        "title": {
+          "en": "Computer !{{is|isn't}} connected",
+          "sv": "Datorn !{{är|är inte}} ansluten"
+        },
+        "titleFormatted": {
+          "en": "Computer !{{is|isn't}} connected",
+          "sv": "Datorn !{{är|är inte}} ansluten"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=computer"
+          }
+        ]
+      },
+      {
+        "id": "timer_running",
+        "title": {
+          "en": "Timer !{{is|isn't}} running",
+          "sv": "Timer !{{är|är inte}} igång"
+        },
+        "titleFormatted": {
+          "en": "Timer !{{is|isn't}} running",
+          "sv": "Timer !{{är|är inte}} igång"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=computer"
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "cancel_timer",
+        "title": {
+          "en": "Cancel the timer",
+          "sv": "Avbryt timern"
+        },
+        "titleFormatted": {
+          "en": "Cancel the timer",
+          "sv": "Avbryt timern"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=computer"
+          }
+        ]
+      },
+      {
+        "id": "end_time",
+        "title": {
+          "en": "End the time now",
+          "sv": "Avsluta tiden nu"
+        },
+        "titleFormatted": {
+          "en": "End the time now",
+          "sv": "Avsluta tiden nu"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=computer"
+          }
+        ]
+      },
+      {
+        "id": "extend_timer",
+        "title": {
+          "en": "Add time",
+          "sv": "Lägg till tid"
+        },
+        "titleFormatted": {
+          "en": "Add [[minutes]] minutes to the timer",
+          "sv": "Lägg till [[minutes]] minuter på timern"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=computer"
+          },
+          {
+            "type": "text",
+            "name": "minutes",
+            "required": false,
+            "title": {
+              "en": "Minutes (empty for the usual five)",
+              "sv": "Minuter (tomt för de vanliga fem)"
+            },
+            "placeholder": {
+              "en": "5",
+              "sv": "5"
+            }
+          }
+        ]
+      },
+      {
+        "id": "start_timer",
+        "title": {
+          "en": "Start a timer",
+          "sv": "Starta en timer"
+        },
+        "titleFormatted": {
+          "en": "Start a timer for [[minutes]] minutes [[message]]",
+          "sv": "Starta en timer på [[minutes]] minuter [[message]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=computer"
+          },
+          {
+            "type": "number",
+            "name": "minutes",
+            "title": {
+              "en": "Minutes",
+              "sv": "Minuter"
+            },
+            "min": 1,
+            "max": 1440,
+            "step": 1,
+            "placeholder": {
+              "en": "30",
+              "sv": "30"
+            }
+          },
+          {
+            "type": "text",
+            "name": "message",
+            "required": false,
+            "title": {
+              "en": "Message",
+              "sv": "Meddelande"
+            },
+            "placeholder": {
+              "en": "Homework",
+              "sv": "Läxor"
+            }
+          }
+        ]
+      },
+      {
+        "id": "start_until",
+        "title": {
+          "en": "Start a timer until a time",
+          "sv": "Starta en timer till en tid"
+        },
+        "titleFormatted": {
+          "en": "Start a timer until [[until]] [[message]]",
+          "sv": "Starta en timer till [[until]] [[message]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=computer"
+          },
+          {
+            "type": "text",
+            "name": "until",
+            "title": {
+              "en": "Time",
+              "sv": "Tid"
+            },
+            "placeholder": {
+              "en": "20:00",
+              "sv": "20:00"
+            }
+          },
+          {
+            "type": "text",
+            "name": "message",
+            "required": false,
+            "title": {
+              "en": "Message",
+              "sv": "Meddelande"
+            },
+            "placeholder": {
+              "en": "Homework",
+              "sv": "Läxor"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "Computer",
+        "sv": "Dator"
+      },
+      "class": "sensor",
+      "connectivity": [
+        "lan"
+      ],
+      "platforms": [
+        "local"
+      ],
+      "capabilities": [
+        "fmm_online",
+        "fmm_timer_running",
+        "fmm_minutes_left",
+        "fmm_locked"
+      ],
+      "images": {
+        "small": "/drivers/computer/assets/images/small.png",
+        "large": "/drivers/computer/assets/images/large.png",
+        "xlarge": "/drivers/computer/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "connect",
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "repair": [
+        {
+          "id": "connect"
+        }
+      ],
+      "id": "computer"
+    }
+  ],
+  "capabilities": {
+    "fmm_locked": {
+      "type": "boolean",
+      "title": {
+        "en": "Locked",
+        "sv": "Låst"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "The computer was locked",
+        "sv": "Datorn låstes"
+      },
+      "insightsTitleFalse": {
+        "en": "The computer was unlocked",
+        "sv": "Datorn låstes upp"
+      }
+    },
+    "fmm_minutes_left": {
+      "type": "number",
+      "title": {
+        "en": "Minutes left",
+        "sv": "Minuter kvar"
+      },
+      "units": {
+        "en": "min",
+        "sv": "min"
+      },
+      "decimals": 0,
+      "min": 0,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "insights": true
+    },
+    "fmm_online": {
+      "type": "boolean",
+      "title": {
+        "en": "Connected",
+        "sv": "Ansluten"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "The computer came online",
+        "sv": "Datorn kom online"
+      },
+      "insightsTitleFalse": {
+        "en": "The computer went offline",
+        "sv": "Datorn gick offline"
+      }
+    },
+    "fmm_timer_running": {
+      "type": "boolean",
+      "title": {
+        "en": "Timer running",
+        "sv": "Timer igång"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "A timer started",
+        "sv": "En timer startade"
+      },
+      "insightsTitleFalse": {
+        "en": "The timer ended",
+        "sv": "Timern tog slut"
+      },
+      "options": {
+        "greyout": false
+      }
+    }
+  }
+}

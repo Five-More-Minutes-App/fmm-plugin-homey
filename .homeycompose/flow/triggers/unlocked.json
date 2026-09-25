@@ -1,0 +1,19 @@
+{
+  "id": "unlocked",
+  "title": {
+    "en": "The lock ended",
+    "sv": "Låsningen tog slut"
+  },
+  "hint": {
+    "en": "Runs when the lock ends or is lifted, for instance because time was started.",
+    "sv": "Körs när låsningen tar slut eller hävs, till exempel för att tid startades."
+  },
+  "tokens": [],
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=computer"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "start_until",
+  "title": {
+    "en": "Start a timer until a time",
+    "sv": "Starta en timer till en tid"
+  },
+  "titleFormatted": {
+    "en": "Start a timer until [[until]] [[message]]",
+    "sv": "Starta en timer till [[until]] [[message]]"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=computer"
+    },
+    {
+      "type": "text",
+      "name": "until",
+      "title": {
+        "en": "Time",
+        "sv": "Tid"
+      },
+      "placeholder": {
+        "en": "20:00",
+        "sv": "20:00"
+      }
+    },
+    {
+      "type": "text",
+      "name": "message",
+      "required": false,
+      "title": {
+        "en": "Message",
+        "sv": "Meddelande"
+      },
+      "placeholder": {
+        "en": "Homework",
+        "sv": "Läxor"
+      }
+    }
+  ]
+}

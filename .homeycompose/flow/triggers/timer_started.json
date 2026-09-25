@@ -1,0 +1,38 @@
+{
+  "id": "timer_started",
+  "title": {
+    "en": "A timer started",
+    "sv": "En timer startade"
+  },
+  "hint": {
+    "en": "Runs when time is started on the computer, from anywhere: the app, a schedule, or a flow.",
+    "sv": "Körs när tid startas på datorn, varifrån som helst: appen, ett schema eller ett flöde."
+  },
+  "tokens": [
+    {
+      "name": "minutes",
+      "type": "number",
+      "title": {
+        "en": "Minutes",
+        "sv": "Minuter"
+      },
+      "example": 30
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "title": {
+        "en": "Message",
+        "sv": "Meddelande"
+      },
+      "example": "Homework"
+    }
+  ],
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=computer"
+    }
+  ]
+}

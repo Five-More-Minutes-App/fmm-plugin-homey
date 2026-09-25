@@ -1,0 +1,19 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "Connected",
+    "sv": "Ansluten"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "insights": true,
+  "insightsTitleTrue": {
+    "en": "The computer came online",
+    "sv": "Datorn kom online"
+  },
+  "insightsTitleFalse": {
+    "en": "The computer went offline",
+    "sv": "Datorn gick offline"
+  }
+}

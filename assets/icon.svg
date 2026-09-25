@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 960" width="960" height="960">
+  <!-- A stopwatch: an original mark, one colour, as Homey icons are. -->
+  <g fill="none" stroke="#000" stroke-width="64" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="480" cy="540" r="330"/>
+    <path d="M480 540 L480 340"/>
+    <path d="M480 540 L620 620"/>
+    <path d="M400 150 L560 150"/>
+    <path d="M480 150 L480 210"/>
+    <path d="M745 300 L800 245"/>
+  </g>
+</svg>

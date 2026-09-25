@@ -1,0 +1,19 @@
+{
+  "id": "went_offline",
+  "title": {
+    "en": "The computer went offline",
+    "sv": "Datorn gick offline"
+  },
+  "hint": {
+    "en": "Runs when the computer stops talking to Five More Minutes, for instance when it is turned off.",
+    "sv": "Körs när datorn slutar prata med Five More Minutes, till exempel när den stängs av."
+  },
+  "tokens": [],
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=computer"
+    }
+  ]
+}

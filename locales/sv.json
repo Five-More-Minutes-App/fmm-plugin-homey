@@ -1,0 +1,34 @@
+{
+  "pair": {
+    "connect": {
+      "title": "Anslut en dator",
+      "intro": "Skapa en API-nyckel i Five More Minutes-portalen (Tillägg), välj datorn och kryssa i de behörigheter du vill att Homey ska ha. Nyckeln öppnar just den datorn, och bara från ditt hemnätverk.",
+      "urlLabel": "Adress till Five More Minutes",
+      "urlHint": "Där Homey når den, till exempel http://192.168.1.10:5072.",
+      "keyLabel": "API-nyckel",
+      "keyHint": "Börjar med fmmk_. Den visas bara en gång när du skapar den.",
+      "button": "Anslut"
+    }
+  },
+  "repair": {
+    "connect": {
+      "title": "Ange en ny nyckel",
+      "intro": "Nyckeln slutade fungera: den kan ha återkallats eller gått ut. Skapa en ny i Five More Minutes-portalen för samma dator och ange den här."
+    }
+  },
+  "errors": {
+    "config": "Adressen eller nyckeln går inte att använda: {{reason}}",
+    "auth": "Nyckeln godtogs inte. Den kan vara fel, återkallad eller ha gått ut. Skapa en ny i Five More Minutes-portalen.",
+    "networkOnly": "Five More Minutes svarar bara appar på ditt hemnätverk. Homey måste vara på samma nätverk, och adressen måste vara den lokala.",
+    "forbidden": "Nyckeln har inte den behörighet som krävs. Skapa en ny nyckel med rätt behörigheter. Behörigheter kan inte ändras i efterhand.",
+    "notPossible": "Går inte just nu: {{reason}}",
+    "invalid": "Five More Minutes förstod inte det: {{reason}}",
+    "rateLimited": "För många förfrågningar. Försök igen om en stund.",
+    "network": "Det gick inte att nå Five More Minutes. Är det igång, och stämmer adressen?",
+    "unexpected": "Något oväntat gick fel i kontakten med Five More Minutes. {{reason}}",
+    "unavailable": "Den här datorn är inte ansluten just nu.",
+    "minutes": "Minuter måste vara ett heltal från 1 till 1440.",
+    "until": "Ange en tid som 20:00.",
+    "wrongComputer": "Den nyckeln är för en annan dator ({{name}}). Använd en nyckel för den dator som den här enheten är."
+  }
+}

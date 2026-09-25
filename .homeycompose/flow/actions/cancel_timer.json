@@ -1,0 +1,18 @@
+{
+  "id": "cancel_timer",
+  "title": {
+    "en": "Cancel the timer",
+    "sv": "Avbryt timern"
+  },
+  "titleFormatted": {
+    "en": "Cancel the timer",
+    "sv": "Avbryt timern"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=computer"
+    }
+  ]
+}

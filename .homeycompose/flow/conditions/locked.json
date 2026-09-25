@@ -1,0 +1,18 @@
+{
+  "id": "locked",
+  "title": {
+    "en": "Computer !{{is|isn't}} locked",
+    "sv": "Datorn !{{är|är inte}} låst"
+  },
+  "titleFormatted": {
+    "en": "Computer !{{is|isn't}} locked",
+    "sv": "Datorn !{{är|är inte}} låst"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=computer"
+    }
+  ]
+}

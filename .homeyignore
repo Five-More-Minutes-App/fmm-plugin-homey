@@ -1,0 +1,8 @@
+test/
+docs/
+.github/
+node_modules/
+package-lock.json
+fmm-plugin.json
+icon.png
+CHANGELOG.md

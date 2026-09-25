@@ -1,0 +1,34 @@
+{
+  "pair": {
+    "connect": {
+      "title": "Connect a computer",
+      "intro": "Make an API key in the Five More Minutes portal (Plugins), choose the computer, and tick the permissions you want Homey to have. The key opens that one computer, from your home network only.",
+      "urlLabel": "Address of Five More Minutes",
+      "urlHint": "Where Homey can reach it, for example http://192.168.1.10:5072.",
+      "keyLabel": "API key",
+      "keyHint": "Starts with fmmk_. It is shown only once when you make it.",
+      "button": "Connect"
+    }
+  },
+  "repair": {
+    "connect": {
+      "title": "Enter a new key",
+      "intro": "The key stopped working: it may have been revoked or expired. Make a new one in the Five More Minutes portal for this same computer, and enter it here."
+    }
+  },
+  "errors": {
+    "config": "That address or key cannot be used: {{reason}}",
+    "auth": "The key was not accepted. It may be wrong, revoked or expired. Make a new one in the Five More Minutes portal.",
+    "networkOnly": "Five More Minutes only answers apps on your home network. Homey has to be on the same network, and the address has to be the local one.",
+    "forbidden": "The key does not have the permission this needs. Make a new key with the right permissions ticked. Permissions cannot be changed afterwards.",
+    "notPossible": "Not possible right now: {{reason}}",
+    "invalid": "Five More Minutes did not understand that: {{reason}}",
+    "rateLimited": "Too many requests. Try again in a moment.",
+    "network": "Could not reach Five More Minutes. Is it running, and is the address right?",
+    "unexpected": "Something unexpected went wrong talking to Five More Minutes. {{reason}}",
+    "unavailable": "This computer is not connected right now.",
+    "minutes": "Minutes has to be a whole number from 1 to 1440.",
+    "until": "Use a time like 20:00.",
+    "wrongComputer": "That key is for a different computer ({{name}}). Use a key for the computer this device is."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "com.fivemoreminutes",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "Five More Minutes",
+    "sv": "Five More Minutes"
+  },
+  "description": {
+    "en": "See and control the screen time on your child's computer from Homey: start a timer, give more time, and react when time is up.",
+    "sv": "Se och styr skärmtiden på barnets dator från Homey: starta en timer, ge mer tid och reagera när tiden är slut."
+  },
+  "category": [
+    "tools"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Five More Minutes"
+  },
+  "brandColor": "#f2a63b",
+  "source": "https://github.com/five-more-minutes/fmm-plugin-homey",
+  "homepage": "https://github.com/five-more-minutes/fmm-plugin-homey#readme",
+  "support": "https://github.com/five-more-minutes/fmm-plugin-homey/issues",
+  "bugs": {
+    "url": "https://github.com/five-more-minutes/fmm-plugin-homey/issues"
+  },
+  "tags": {
+    "en": [
+      "screen time",
+      "parental control",
+      "timer",
+      "kids"
+    ],
+    "sv": [
+      "skärmtid",
+      "föräldrakontroll",
+      "timer",
+      "barn"
+    ]
+  }
+}

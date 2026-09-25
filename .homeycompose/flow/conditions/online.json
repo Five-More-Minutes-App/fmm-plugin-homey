@@ -1,0 +1,18 @@
+{
+  "id": "online",
+  "title": {
+    "en": "Computer !{{is|isn't}} connected",
+    "sv": "Datorn !{{är|är inte}} ansluten"
+  },
+  "titleFormatted": {
+    "en": "Computer !{{is|isn't}} connected",
+    "sv": "Datorn !{{är|är inte}} ansluten"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=computer"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "locked",
+  "title": {
+    "en": "The computer was locked",
+    "sv": "Datorn låstes"
+  },
+  "hint": {
+    "en": "Runs when Five More Minutes locks the computer.",
+    "sv": "Körs när Five More Minutes låser datorn."
+  },
+  "tokens": [
+    {
+      "name": "minutes",
+      "type": "number",
+      "title": {
+        "en": "Minutes locked",
+        "sv": "Minuter låst"
+      },
+      "example": 30
+    }
+  ],
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=computer"
+    }
+  ]
+}

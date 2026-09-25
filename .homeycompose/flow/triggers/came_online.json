@@ -1,0 +1,19 @@
+{
+  "id": "came_online",
+  "title": {
+    "en": "The computer came online",
+    "sv": "Datorn kom online"
+  },
+  "hint": {
+    "en": "Runs when the computer starts talking to Five More Minutes.",
+    "sv": "Körs när datorn börjar prata med Five More Minutes."
+  },
+  "tokens": [],
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=computer"
+    }
+  ]
+}

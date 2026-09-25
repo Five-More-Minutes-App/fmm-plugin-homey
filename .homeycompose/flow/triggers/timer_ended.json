@@ -1,0 +1,19 @@
+{
+  "id": "timer_ended",
+  "title": {
+    "en": "A timer ended",
+    "sv": "En timer tog slut"
+  },
+  "hint": {
+    "en": "Runs when the timer ends, whether time ran out or it was cancelled.",
+    "sv": "Körs när timern tar slut, oavsett om tiden gick ut eller den avbröts."
+  },
+  "tokens": [],
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=computer"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "timer_extended",
+  "title": {
+    "en": "Time was added",
+    "sv": "Tid lades till"
+  },
+  "hint": {
+    "en": "Runs when a running timer is made longer.",
+    "sv": "Körs när en pågående timer förlängs."
+  },
+  "tokens": [
+    {
+      "name": "minutes",
+      "type": "number",
+      "title": {
+        "en": "Minutes left",
+        "sv": "Minuter kvar"
+      },
+      "example": 30
+    }
+  ],
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=computer"
+    }
+  ]
+}

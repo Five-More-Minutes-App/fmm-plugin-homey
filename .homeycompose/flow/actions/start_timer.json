@@ -1,0 +1,46 @@
+{
+  "id": "start_timer",
+  "title": {
+    "en": "Start a timer",
+    "sv": "Starta en timer"
+  },
+  "titleFormatted": {
+    "en": "Start a timer for [[minutes]] minutes [[message]]",
+    "sv": "Starta en timer på [[minutes]] minuter [[message]]"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=computer"
+    },
+    {
+      "type": "number",
+      "name": "minutes",
+      "title": {
+        "en": "Minutes",
+        "sv": "Minuter"
+      },
+      "min": 1,
+      "max": 1440,
+      "step": 1,
+      "placeholder": {
+        "en": "30",
+        "sv": "30"
+      }
+    },
+    {
+      "type": "text",
+      "name": "message",
+      "required": false,
+      "title": {
+        "en": "Message",
+        "sv": "Meddelande"
+      },
+      "placeholder": {
+        "en": "Homework",
+        "sv": "Läxor"
+      }
+    }
+  ]
+}

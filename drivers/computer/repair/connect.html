@@ -1,0 +1,52 @@
+<style>
+  .fmm { font-size: 16px; }
+  .fmm p { margin: 0 0 12px; }
+  .fmm label { display: block; font-weight: 600; margin: 14px 0 4px; }
+  .fmm input { width: 100%; box-sizing: border-box; font-size: 16px; padding: 10px; }
+  .fmm .hint { color: #777; font-size: 14px; margin-top: 4px; }
+  .fmm .error { color: #c62f3e; margin-top: 12px; min-height: 1.4em; }
+  .fmm button { margin-top: 16px; }
+</style>
+
+<div class="fmm">
+  <p data-i18n="repair.connect.intro"></p>
+
+  <label for="fmm-url" data-i18n="pair.connect.urlLabel"></label>
+  <input id="fmm-url" type="text" inputmode="url" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="http://192.168.1.10:5072">
+  <div class="hint" data-i18n="pair.connect.urlHint"></div>
+
+  <label for="fmm-key" data-i18n="pair.connect.keyLabel"></label>
+  <input id="fmm-key" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="fmmk_...">
+  <div class="hint" data-i18n="pair.connect.keyHint"></div>
+
+  <div id="fmm-error" class="error" role="alert"></div>
+  <button id="fmm-connect" class="hy-button-primary" data-i18n="pair.connect.button"></button>
+</div>
+
+<script type="text/javascript">
+  Homey.setTitle(Homey.__('repair.connect.title'));
+
+  document.querySelectorAll('[data-i18n]').forEach(function (el) {
+    el.textContent = Homey.__(el.getAttribute('data-i18n'));
+  });
+
+  var button = document.getElementById('fmm-connect');
+  var error = document.getElementById('fmm-error');
+
+  button.addEventListener('click', function () {
+    error.textContent = '';
+    button.disabled = true;
+
+    Homey.emit('connect', {
+      url: document.getElementById('fmm-url').value,
+      apiKey: document.getElementById('fmm-key').value,
+    }).then(function () {
+      // The key is not kept in the page once it has been sent.
+      document.getElementById('fmm-key').value = '';
+      Homey.done();
+    }).catch(function (e) {
+      error.textContent = (e && e.message) || String(e);
+      button.disabled = false;
+    });
+  });
+</script>
