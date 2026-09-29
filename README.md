@@ -1,7 +1,7 @@
 # Five More Minutes for Homey
 
 See and control the screen time on your child's computer from your smart home.
-[Five More Minutes](https://github.com/five-more-minutes/FiveMoreMinutes) decides *when* a computer is
+[Five More Minutes](https://github.com/five-more-minutes/fmm-app) decides *when* a computer is
 usable; this app puts it into Homey so a flow can start time, add time, end it, and react when it changes.
 
 Free, open source (MIT), and it talks only to Five More Minutes on your own network.
