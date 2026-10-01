@@ -27,11 +27,11 @@
     "name": "Five More Minutes"
   },
   "brandColor": "#f2a63b",
-  "source": "https://github.com/five-more-minutes/fmm-plugin-homey",
-  "homepage": "https://github.com/five-more-minutes/fmm-plugin-homey#readme",
-  "support": "https://github.com/five-more-minutes/fmm-plugin-homey/issues",
+  "source": "https://github.com/Five-More-Minutes-App/fmm-plugin-homey",
+  "homepage": "https://github.com/Five-More-Minutes-App/fmm-plugin-homey#readme",
+  "support": "https://github.com/Five-More-Minutes-App/fmm-plugin-homey/issues",
   "bugs": {
-    "url": "https://github.com/five-more-minutes/fmm-plugin-homey/issues"
+    "url": "https://github.com/Five-More-Minutes-App/fmm-plugin-homey/issues"
   },
   "tags": {
     "en": [

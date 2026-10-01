@@ -10,7 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [18, 20, 22]
+        # Not 18: EOL, and node --test doesn't expand a quoted glob pattern on it the way
+        # 20+ does, so "test/*.test.mjs" matches nothing rather than every test file.
+        node: [20, 22]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -36,7 +38,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/checkout@v4
         with:
-          repository: five-more-minutes/fmm-plugin-registry
+          repository: Five-More-Minutes-App/fmm-plugin-registry
           path: registry
       - uses: actions/setup-node@v4
         with:

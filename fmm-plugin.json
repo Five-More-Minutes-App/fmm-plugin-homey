@@ -9,8 +9,8 @@
     "url": "https://github.com/five-more-minutes"
   },
   "license": "MIT",
-  "repository": "https://github.com/five-more-minutes/fmm-plugin-homey",
-  "documentation": "https://github.com/five-more-minutes/fmm-plugin-homey#readme",
+  "repository": "https://github.com/Five-More-Minutes-App/fmm-plugin-homey",
+  "documentation": "https://github.com/Five-More-Minutes-App/fmm-plugin-homey#readme",
   "icon": "icon.png",
   "categories": ["smart-home", "automation"],
   "platform": "Homey Pro",
@@ -41,7 +41,7 @@
       {
         "title": "Install the app on your Homey Pro",
         "text": "Homey Pro only: the app talks to Five More Minutes on your home network. On a computer on the same network, install the Homey command line tool, sign in, and install the app.",
-        "code": "npm install -g homey\nhomey login\ngit clone https://github.com/five-more-minutes/fmm-plugin-homey\ncd fmm-plugin-homey\nhomey app install",
+        "code": "npm install -g homey\nhomey login\ngit clone https://github.com/Five-More-Minutes-App/fmm-plugin-homey\ncd fmm-plugin-homey\nhomey app install",
         "link": {
           "label": "Installing apps on Homey (Athom)",
           "url": "https://apps.developer.homey.app/the-basics/getting-started"
@@ -57,7 +57,7 @@
         "text": "The computer now shows whether a timer runs and the minutes left. In Flows you get triggers for start, added time, end, lock and unlock, and actions to start, extend, end and cancel.",
         "link": {
           "label": "Flow examples",
-          "url": "https://github.com/five-more-minutes/fmm-plugin-homey#flow-ideas"
+          "url": "https://github.com/Five-More-Minutes-App/fmm-plugin-homey#flow-ideas"
         }
       }
     ]

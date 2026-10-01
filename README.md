@@ -1,7 +1,7 @@
 # Five More Minutes for Homey
 
 See and control the screen time on your child's computer from your smart home.
-[Five More Minutes](https://github.com/five-more-minutes/fmm-app) decides *when* a computer is
+[Five More Minutes](https://github.com/Five-More-Minutes-App/fmm-app) decides *when* a computer is
 usable; this app puts it into Homey so a flow can start time, add time, end it, and react when it changes.
 
 Free, open source (MIT), and it talks only to Five More Minutes on your own network.
@@ -60,7 +60,7 @@ Until the app is in the Homey App Store, install it from source. On a computer o
 ```bash
 npm install -g homey
 homey login
-git clone https://github.com/five-more-minutes/fmm-plugin-homey
+git clone https://github.com/Five-More-Minutes-App/fmm-plugin-homey
 cd fmm-plugin-homey
 homey app install
 ```
@@ -126,7 +126,7 @@ stand-in for the Homey runtime (`test/fake-homey.cjs`) and a faithful mock of th
 (`test/mock-fmm.mjs`).
 
 - `lib/controller.js` follows the computer and decides what fires: no Homey in it, and most of the tests.
-- `lib/client.js` and `lib/events.js` are copied from [fmm-plugin-template-node](https://github.com/five-more-minutes/fmm-plugin-template-node) as CommonJS.
+- `lib/client.js` and `lib/events.js` are copied from [fmm-plugin-template-node](https://github.com/Five-More-Minutes-App/fmm-plugin-template-node) as CommonJS.
 - `drivers/computer/` is the Homey glue: pairing, repair, and the device.
 - `.homeycompose/` holds the manifest, capabilities and flow cards; `app.json` is what `homey app build` makes of it, and is committed.
 
