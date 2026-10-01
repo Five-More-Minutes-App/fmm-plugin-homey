@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        # Not 18: EOL, and node --test doesn't expand a quoted glob pattern on it the way
-        # 20+ does, so "test/*.test.mjs" matches nothing rather than every test file.
-        node: [20, 22]
+        # Not 18 or 20: both EOL, and node --test does not expand a quoted glob pattern on them the way
+        # 21+ does, so "test/*.test.mjs" matches nothing rather than every test file.
+        node: [22, 24]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
